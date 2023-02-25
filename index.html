@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Financeira</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background: url(https://www.imagensempng.com.br/wp-content/uploads/2021/08/02-39.png);
+            background-size: cover;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: 0px;
+        }
+
+        #div_box_calculadora {
+            width: 300px;
+            height: 370px;
+            background-color: #DFC4FF;
+            border-radius: 25px;
+            border: solid 3px;
+        }
+
+        #div_titulo {
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #000000;
+            text-align: center;
+            width: 100%;
+            margin-top: 15px;
+            padding-bottom: 5px;
+            border-bottom: solid 2px;
+        }
+
+        #div_calculadora {
+            width: 100% - 15px;
+            margin: 15px;
+        }
+
+        #div_ipt1{
+            width: 47%;
+            float: left;
+        }
+
+        #div_ipt2{
+            width: 47%;
+            float: right;
+            margin-right: 3px;
+        }
+        input {
+            width: 100%;
+            height: 25px;
+            border: solid 1px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+
+        #div_box_resultado {
+            width: 100%;
+            height: 25px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            border: solid 1px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        #div_resul {
+            margin: 5px;
+        }
+
+        button {
+            width: 100%;
+            height: 30px;
+            background-color: #6713CD;
+            border: solid 1px #6713CD;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #ffffff;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        button:hover {
+            height: 32px;
+            background-color: #7f16ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div_box_calculadora">
+        <div id="div_titulo">Calculadora Financeira</div>
+        <div id="div_calculadora">
+            <div id="div_ipt1">
+                1ºNumero:<br>
+                <input type="number" id="ipt_n1">
+            </div>
+            <div id="div_ipt2">
+                2ºNumero:<br>
+                <input type="number" id="ipt_n2" align="right">
+            </div>
+            <b>Resultado:</b><br>
+            <div id="div_box_resultado">
+                <div id="div_resul"></div>
+            </div>
+            <button onclick="somar()">Somar</button>
+            <button onclick="subtrair()">Subtrair</button>
+            <button onclick="multiplicar()">Multiplicar</button>
+            <button onclick="dividir()">Dividir</button>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    function somar() {
+        var n1 = Number(ipt_n1.value);
+        var n2 = Number(ipt_n2.value);
+
+        var soma = n1 + n2;
+
+        div_resul.innerHTML = soma;
+    };
+
+    function subtrair() {
+        var n1 = Number(ipt_n1.value);
+        var n2 = Number(ipt_n2.value);
+
+        var subtracao = n1 - n2;
+
+        div_resul.innerHTML = subtracao;
+    };
+
+    function multiplicar() {
+        var n1 = Number(ipt_n1.value);
+        var n2 = Number(ipt_n2.value);
+
+        var multiplicacao = n1 * n2;
+
+        div_resul.innerHTML = multiplicacao;
+    };
+
+    function dividir() {
+        var n1 = Number(ipt_n1.value);
+        var n2 = Number(ipt_n2.value);
+
+        var divisao = n1 / n2;
+
+        div_resul.innerHTML = divisao;
+    };
+</script>
